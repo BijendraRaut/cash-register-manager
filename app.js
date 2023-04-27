@@ -2,8 +2,8 @@ const billAmount = document.querySelector("#bill-amount");
 const cashGiven = document.querySelector("#cash-given");
 const checkBtn = document.querySelector("#check-remaining");
 const message = document.querySelector("#error-message");
-const ChangeNotes = document.querySelector("#notes");
-const notes = [2000, 500, 100, 20, 10, 5, 1];
+const noOfNotes = document.querySelectorAll(".notes");
+const availableNotes = [2000, 500, 100, 20, 10, 5, 1];
 
 checkBtn.addEventListener("click", function ManageCash() {
   hideMessage();
@@ -20,7 +20,11 @@ checkBtn.addEventListener("click", function ManageCash() {
 });
 
 function calculateChange(amountToBeReturned) {
-  for (let i = 0; i < notes.length; i++) {}
+  for (let i = 0; i < availableNotes.length; i++) {
+    const numberOfNotes = Math.trunc(amountToBeReturned / availableNotes[i]);
+    amountToBeReturned = amountToBeReturned % availableNotes[i];
+    noOfNotes[i].innerText = numberOfNotes;
+  }
 }
 
 function hideMessage() {
