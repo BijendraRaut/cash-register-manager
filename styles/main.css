@@ -15,7 +15,6 @@ body {
     min-width: 100vw;
   }
 
-
 h1 {
     color: var(--primary-color);
 }
@@ -28,7 +27,6 @@ h1 {
     font-size: 1.2rem;
 }
 
-
 label {
     font-size: larger;
     display: block;
@@ -37,11 +35,12 @@ label {
 input {
     border-radius: 0.5rem;
     border: 2px solid var(--primary-color);
-    height: 5vh;
     display: block;
     max-width: 250px;
     width: 100%;
     outline: #fff;
+    margin: 1rem;
+    padding: 0.6rem 1rem;
 }
 button {
     border-radius: 2rem;
